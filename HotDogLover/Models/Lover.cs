@@ -12,5 +12,7 @@ namespace HotDogLover.Models
         public string LastName { get; set; }
         public string Biography { get; set; }
         public string Image { get; set; }
+        public Dog FavoriteDog { get; set; }
+        public List<Dog> DogList { get; set; }
     }
 }
