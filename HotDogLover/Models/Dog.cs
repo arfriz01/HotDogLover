@@ -10,21 +10,23 @@ namespace HotDogLover.Models
 {
     public class Dog
     {
-        public int HotdogID { get; set; }
-        public string Name { get; set; }
-        public DateTime LastAte { get; set; }
-        public int Rating { get; set; }
-
         [Required(ErrorMessage = "Name is required")]
         [DisplayName("Name")]
+        public int HotdogID { get; set; }
 
-        [DisplayName("Last Ate")]
+         [DisplayName("Last Ate")]
         [Required(ErrorMessage = "Last Ate is required")]
+        public string Name { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
+         [DataType(DataType.Date)]
+         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime LastAte { get; set; }
 
         [Range(1, 5,
             ErrorMessage = "Rate it!")]
+        public int Rating { get; set; }
+        
+
+        
     }
 }
