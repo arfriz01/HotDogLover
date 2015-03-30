@@ -3,37 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HotDogLover.Models;
+using HotDogLover.Services;
 
 namespace HotDogLover.Controllers
 {
     public class ProfileController : Controller
     {
-        // GET: Profile
+    
         public ActionResult Index()
         {
             return View();
         }
-        // GET: Profile/Details/5
+     
         public ActionResult Details(int id)
         {
-            HotDogLover.Models.Profile profile = profileService.Get(id);
+            HotDogLover.Models.Lover profile = profileService.Get(id);
             return View(profile);
         }
 
-        // GET: Profile/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Profile/Create
+    
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
             try
             {
-                // TODO: Add insert logic here
-
+      
                 return RedirectToAction("Index");
             }
             catch
@@ -42,20 +42,19 @@ namespace HotDogLover.Controllers
             }
         }
 
-        // GET: Profile/Edit/5
+
         public ActionResult Edit(int id)
         {
             return View(profileService.Get(id));
         }
 
-        // POST: Profile/Edit/5
         [HttpPost]
-        //public ActionResult Create([Bind(Include = "StudentID,Name,Email,Age,Address,City,Zip,State")] Student student)
-        public ActionResult Edit([Bind(Include = "LoverID, FirstName,LastName, Biography,Image")]Profile profile)
+      
+        public ActionResult Edit([Bind(Include = "LoverID, Name, Biography,Image")]Lover profile)
         {
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("Edit", new { id = profile.ProfileID });
+                return RedirectToAction("Edit", new { id = profile.LoverID });
             }
             try
             {
@@ -68,17 +67,17 @@ namespace HotDogLover.Controllers
             }
         }
 
-        // GET: Profile/AddDog/5
+   
         public ActionResult CreateDog(int id)
         {
             ViewBag.profileID = id;
             return View();
         }
 
-        // POST: Profile/EditDog/5
+      
         [HttpPost]
-        //public ActionResult Create([Bind(Include = "StudentID,Name,Email,Age,Address,City,Zip,State")] Student student)
-        public ActionResult AddDog(int profileID, [Bind(Include = "HotDogName,LastTimeAte,LastPlaceAte,Rating")]HotDog dog)
+       
+        public ActionResult AddDog(int profileID, [Bind(Include = "Name,LastAte,LastPlaceAte,Rating")]Dog dog)
         {
             if (!ModelState.IsValid)
             {
@@ -87,7 +86,7 @@ namespace HotDogLover.Controllers
             }
             try
             {
-                profileService.AddDog(new Profile() { ProfileID = profileID }, dog);
+                profileService.AddDog(new Lover() { LoverID = profileID }, dog);
                 return RedirectToAction("Details", new { id = profileID });
             }
             catch

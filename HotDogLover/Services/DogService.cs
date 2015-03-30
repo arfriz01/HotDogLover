@@ -13,36 +13,36 @@ namespace HotDogLover.Services
             hDogs = new List<Dog>();
             Dog dog1 = new Dog()
             {
-                HotDogID = 1,
-                HotDogName = "Cheese Filled Dog",
+                HotdogID = 1,
+                Name = "Cheese Filled Dog",
                 LastPlaceAte = "Tony's",
-                LastTimeAte = new DateTime(),
+                LastAte = new DateTime(),
                 Rating = 5
             };
             hDogs.Add(dog1);
            
             Dog dog2 = new Dog()
             {
-                HotDogID = 2,
-                HotDogName = "Chilli Cheese Dog",
+                HotdogID = 2,
+                Name = "Chilli Cheese Dog",
                 LastPlaceAte = "Ollie's Trollie",
-                LastTimeAte = new DateTime(),
+                LastAte = new DateTime(),
                 Rating = 4
             };
             hDogs.Add(dog2);
 
             Dog dog3 = new Dog()
             {
-                HotDogID = 3,
-                HotDogName = "Sour Dog",
+                HotdogID = 3,
+                Name = "Sour Dog",
                 LastPlaceAte = "Dog City",
-                LastTimeAte = new DateTime(),
+                LastAte = new DateTime(),
                 Rating = 2
             };
             hDogs.Add(dog3);
         }
 
-        public List<HotDog> listAll(){
+        public List<Dog> listAll(){
             return hDogs;
         }
         public Dog Get(int id) 

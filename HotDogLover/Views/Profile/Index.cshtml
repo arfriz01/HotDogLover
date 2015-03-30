@@ -1,0 +1,12 @@
+﻿
+@model IEnumerable<HotDogLover.Models.Lover>
+@{
+    ViewBag.Title = "Profile";
+}
+<h2>Hot Dog Lover Profile</h2>
+<ul>
+    @foreach (var profile in Model)
+    {
+        <li>@Html.ActionLink(profile.Name, "Details", "Lover", new { id = profile.LoverID }, null)</li>
+    }
+</ul>
