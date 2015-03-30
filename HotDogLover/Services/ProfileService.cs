@@ -98,8 +98,8 @@ namespace HotDogLover.Services
             Profile p2 = new Profile()
             {
                 Name = "F. Smoak",
-                Bio = "Hi, you can call me Fe!",
-                Picture = "",
+                Bio = "Hi, you can call me Fe! I am a computer geek, but my one true love is for hotdogs.",
+                Picture = "https://c2.staticflickr.com/8/7371/13039510383_f865f217f3_b.jpg",
                 ProfileID = 2,
                 FavoriteHotDog = hotDogService.Get(3),
                 HotDogList = myFavs
@@ -112,8 +112,8 @@ namespace HotDogLover.Services
             Profile p3 = new Profile()
             {
                 Name = "Ninja Princess Warrior",
-                Bio = "",
-                Picture = "",
+                Bio = "You need to know nothing...",
+                Picture = "http://www.comicbookresources.com/imgsrv/imglib/400/0/1/19-b1496.jpg",
                 ProfileID = 3,
                 FavoriteHotDog = hotDogService.Get(2),
                 HotDogList = myFavs
