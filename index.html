@@ -10,9 +10,9 @@
 <title>ARFs Blog</title>
 
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
-        <div class="container">
+        <div class="container" >
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div class="navbar-header" >
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -40,55 +40,64 @@
         <div class="col-sm-8 blog-main">
           <div class="blog-post">
 		  <img src="rsz_2visual-studio-logo.jpg">
+		  <br>
+		  <br>
             <h2 class="blog-post-title">MVC Profile: Hot Dog Lover</h2>
             <p class="blog-post-meta">March 03, 2015 by <a href="https://www.google.com/search?newwindow=1&site=&source=hp&q=alicia+rae+frizzell&oq=alicia+rae+frizzell&gs_l=hp.3..33i21.1434.4802.0.5112.20.20.0.0.0.0.216.1805.13j4j1.18.0.msedr...0...1c.1.61.hp..7.13.1251.0.QRwwb08tu6U">Alicia R. Frizzell</a></p>
-            <p>Welcome back! Today we will be talking about MVC and I will discuss a simple profile tutorial that you can try out to see how you like MVC. We will be using Visual Studio 2013 to make our MVC applications. Visual Studio is a great web development tool. It can be used to implement many different platforms such as ASP.NET, MVC and Web Forms. </p>
-            <p>The profile I have created is one for an avid HotDog fan. I used a combination of models, views and controllers to display and control the data presented to the user. </p>
+            <p>Welcome back! Today we will be talking about MVC and I will discuss a simple profile tutorial that you can try out to see how you like it. We will be using Visual Studio 2013 to make our MVC applications. Visual Studio is a great web development tool. It can be used to implement many different platforms such as ASP.NET, MVC and Web Forms. </p>
+            <p>The profile I have created this one for avid Hot Dog fans. I used a combination of models, views and controllers to display and control the data presented to the user. </p>
 			<hr>
-			<img src="DogStache.jpg">
+				<div class= "row text-center">
+					<img src="DogStache.jpg">
+				</div>
             <p></p>
-            <blockquote><pre>"My Favorite Dog on the planet is the Cheddar Cheese Filled Dog at Tony's! 
-			You have to go try it out!"</pre></blockquote>
-              <p>We can allow the user to express their <strong>love</strong> for dogs with this application.</p>
-         
-            <p> <strong></strong> </p>
-			<p><p>
-			<br>
+            <blockquote>"My Favorite Dog on the planet is the Cheddar Cheese Filled Dog at Tony's! 
+			You have to go try it out!"</blockquote>
+              <p>We can allow the user to express their <strong>love</strong> for dogs with this application. They will be able to create their own profile where they can update information such as their profile picture, their favorite dog, or the place they ate. This application should have the functionality to create a hot dog and edit a user profile.</p>
 			<hr>
-		   <h3>Models</h3>
+		   <h3><strong>Models</strong></h3>
 		   <br>
-            <p>A model </p>
+		   <p> The Model handles the <strong>logic</strong> for the application data. </p>
+			<br>
+			<p>This diagram shows the three pieces of this ASP.Net programming model.<p>
+			<div class="well">
+				<div class= "row text-center">
+					<img src="MVC.jpg">
+				</div>
+			</div>
+			<br>
+            <h3>To start our little tutorial, we need to create two models. These models will represent the application core. 
+				In this scenario we need to create two different models:</h3>
 			<ul>
-              <li></li>
-            </ul>
-<hr>
-			<h2></h2>
-			<hr>
-			<p><em></em>. </p>
-			<p><p>
-			<br>
-			
-			<br>
-			
-			<p> <p>
-			<p></p>
-			<hr>
-			<h2></h2>
-			<br>
-
-           <hr>
-            <h3>View</h3>
-            <p>Here are some sources you can check out:</p>
-			<ul>
-				<li><li>
+              <li><strong>Hot Dog</strong></li>
+			  <li><strong>Profile</strong></li>
             </ul>
 			<hr>
-			<h2>Introduction</h2>
+			<p>In our Hot Dog model we can create the properties that each hotdog will possess. Below is an example of a Hot Dog object:</p>
+			<code></code>
 			<br>
+			<p>We can do the same thing for our <em>Profile</em> model:</p>
+			<code></code>
+		   <hr>
+		   <h3><strong>Controller</strong></h3>
+		   <p>The next concept we will cover is the Controllers.</p>
+		   <p>The controller handles the <strong>input</strong>. For this portion of the application, we really only need to create one extra controller- a Profile Controller.</p> 
+		   <p>This part handles what the user inputs, so the profile controller will handle the input to the database records whenever a user tries to edit their information or add a new hot dog.</p> 
+		   <hr>
+            <h3><strong>View</strong></h3>
+			<P>The View</p>
 			
+			<p>Go check out the Hot Dog lover application I was able to create using MVC! </p>
+			<p>The link is below:</p>
+			<a href="https://arfshotdoglover.azurewebsites.net">ARFS HotDogLover App</a>
+            <hr>
+			<p>Here are some sources you can check out:</p>
+			<ul>
+				<li><a href="http://www.w3schools.com/aspnet/mvc_intro.asp">w3schools.com</a></li>
+				<li><a href="http://www.asp.net/mvc/overview/getting-started/introduction/getting-started">Microsoft tutorial</a></li>
+            </ul>
+		
           </div><!-- /.blog-post -->
-
- 
 
          <!-- <nav>
             <ul class="pager">
@@ -100,7 +109,6 @@
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
-            
 			<br>
 			<br>
 			<br>
@@ -117,7 +125,7 @@
           <div class="sidebar-module">
             <h4>Archives</h4>
             <ol class="list-unstyled">
-              <li><a href="#">January 2014</a></li>
+              <li><a href="http://arfrizz.altervista.org">January 2014</a></li>
               <li><a href="http://arfriz01.github.io/nodejs/">February 2014</a></li>
 			   <li><a href="#">March 2014</a></li>
             </ol>
@@ -133,11 +141,8 @@
 		  <br>
 		  <br>
 		  
-		
         </div><!-- /.blog-sidebar -->
-
       </div><!-- /.row -->
-
 	  <div class="well">
                     <h4>Leave a Comment:</h4>
                     <form role="form">
@@ -147,10 +152,7 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-
                 <hr>
-
-                <!-- Posted Comments -->
 
                 <!-- Comment -->
                 <div class="media">
@@ -163,7 +165,6 @@
                         </h4>
 						<h6>-fefebongo19</h6>
                         MVC is really cool. I enjoyed how the structure made everything easier to understand.
-						
                     </div>
                 </div>
 				<hr>
