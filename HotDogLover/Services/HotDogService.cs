@@ -15,7 +15,7 @@ namespace HotDogLover.Services
             {
                 HotDogID = 1,
                 HotDogName = "Chilli Cheese Dog",
-                LastPlaceAte = "Ollie's Trollie",
+                LastPlaceAte = "Tony's",
                 LastTimeAte = new DateTime(),
                 Rating = 10
             };
@@ -25,7 +25,7 @@ namespace HotDogLover.Services
             {
                 HotDogID = 2,
                 HotDogName = "Cheddar Cheese Filled Dog",
-                LastPlaceAte = "Tony's",
+                LastPlaceAte = "Ollie's Trollie",
                 LastTimeAte = new DateTime(),
                 Rating = 8
             };
