@@ -73,11 +73,43 @@
 			  <li><strong>Profile</strong></li>
             </ul>
 			<hr>
-			<p>In our Hot Dog model we can create the properties that each hotdog will possess. Below is an example of a Hot Dog object:</p>
-			<code></code>
+			<p>In our Hot Dog model we can create the properties that each hotdog will possess. Below is an example of a Hot Dog class:</p>
+			<code><pre>public class HotDog
+    {
+        public int HotDogID { get; set; }
+
+        [Required(ErrorMessage = "Name is required")]
+        [DisplayName("Hot Dog Name")]
+        public string HotDogName { get; set; }
+        [DisplayName("Last Ate")]
+        [Required(ErrorMessage = "When you last ate it is required")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime LastTimeAte { get; set; }
+
+        [DisplayName("Where did you eat it?")]
+        [Required(ErrorMessage = "Where you ate it is required")]
+        public string LastPlaceAte { get; set; }
+        [Range(1, 5,
+            ErrorMessage = "Please Pick a rating")]
+        public int Rating { get; set; }
+
+    }
+</code></pre>
 			<br>
 			<p>We can do the same thing for our <em>Profile</em> model:</p>
-			<code></code>
+			<code><pre>namespace HotDogLover.Models
+{
+    public class Profile
+    {
+        public int ProfileID { get; set; }
+        public string Name { get; set; }
+        public string Bio { get; set; }
+        public string Picture { get; set; }
+        public HotDog FavoriteHotDog { get; set; }
+        public List<HotDog> HotDogList { get; set; }
+    }
+}</pre></code>
 		   <hr>
 		   <h3><strong>Controller</strong></h3>
 		   <p>The next concept we will cover is the Controllers.</p>
