@@ -14,8 +14,8 @@ namespace HotDogLover.Services
             HotDog dog1 = new HotDog()
             {
                 HotDogID = 1,
-                HotDogName = "1",
-                LastPlaceAte = "",
+                HotDogName = "Chilli Cheese Dog",
+                LastPlaceAte = "Ollie's Trollie",
                 LastTimeAte = new DateTime(),
                 Rating = 10
             };
@@ -24,8 +24,8 @@ namespace HotDogLover.Services
             HotDog dog2 = new HotDog()
             {
                 HotDogID = 2,
-                HotDogName = "2",
-                LastPlaceAte = "",
+                HotDogName = "Cheddar Cheese Filled Dog",
+                LastPlaceAte = "Tony's",
                 LastTimeAte = new DateTime(),
                 Rating = 8
             };
@@ -34,8 +34,8 @@ namespace HotDogLover.Services
             HotDog dog3 = new HotDog()
             {
                 HotDogID = 3,
-                HotDogName = "3",
-                LastPlaceAte = "",
+                HotDogName = "Sour Dog",
+                LastPlaceAte = "Dog City",
                 LastTimeAte = new DateTime(),
                 Rating = 2
             };
